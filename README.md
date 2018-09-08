@@ -2,4 +2,5 @@
 automation_infopulse
 
 hello world
-pencil + wattermelon
+
+pencil + wattermelonl + apple
