@@ -47,3 +47,4 @@ print(b.title())
 print(b.capitalize())
 print(b.upper())
 print(b.lower())
+
