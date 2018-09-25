@@ -1,0 +1,218 @@
+     Help on module decimal:
+
+NAME
+    decimal - C decimal arithmetic module
+  
+        abs(self, x, /)
+     |      Return the absolute value of x.
+     |  
+     |  add(self, x, y, /)
+     |      Return the sum of x and y.
+     |  
+     |  canonical(self, x, /)
+     |      Return a new instance of x.
+     |  
+     |  clear_flags(self, /)
+     |      Reset all flags to False.
+     |  
+     |  clear_traps(self, /)
+     |      Set all traps to False.
+     |  
+     |  compare(self, x, y, /)
+     |      Compare x and y numerically.
+     |  
+     |  compare_signal(self, x, y, /)
+     |      Compare x and y numerically.  All NaNs signal.
+     |  
+     |  compare_total(self, x, y, /)
+     |      Compare x and y using their abstract representation.
+     |  
+     |  compare_total_mag(self, x, y, /)
+     |      Compare x and y using their abstract representation, ignoring sign.
+
+     |  copy(self, /)
+     |      Return a duplicate of the context with all flags cleared.
+     |  
+     |  copy_abs(self, x, /)
+     |      Return a copy of x with the sign set to 0.
+     |  
+     |  copy_decimal(self, x, /)
+     |      Return a copy of Decimal x.
+     |  
+     |  copy_negate(self, x, /)
+     |      Return a copy of x with the sign inverted.
+     |  
+     |  copy_sign(self, x, y, /)
+     |      Copy the sign from y to x.
+     |  
+     |  create_decimal(self, num='0', /)
+     |      Create a new Decimal instance from num, using self as the context. Unlike the
+     |      Decimal constructor, this function observes the context limits.
+     |  
+     |  create_decimal_from_float(self, f, /)
+     |      Create a new Decimal instance from float f.  Unlike the Decimal.from_float()
+     |      class method, this function observes the context limits.
+     |  
+     |  divide(self, x, y, /)
+     |      Return x divided by y.
+     |  
+     |  divmod(self, x, y, /)
+     |      Return quotient and remainder of the division x / y.
+     |  
+     |  exp(self, x, /)
+     |      Return e ** x.
+     |  
+     |  fma(self, x, y, z, /)
+     |      Return x multiplied by y, plus z.
+     |  
+     |  is_canonical(self, x, /)
+     |      Return True if x is canonical, False otherwise.
+     |  
+     |  is_finite(self, x, /)
+     |      Return True if x is finite, False otherwise.
+     |  
+     |  is_infinite(self, x, /)
+     |      Return True if x is infinite, False otherwise.
+     |  
+     |  is_nan(self, x, /)
+     |      Return True if x is a qNaN or sNaN, False otherwise.
+     |  
+     |  is_normal(self, x, /)
+     |      Return True if x is a normal number, False otherwise.
+     |  
+     |  is_qnan(self, x, /)
+     |      Return True if x is a quiet NaN, False otherwise.
+
+        is_signed(self, x, /)
+     |      Return True if x is negative, False otherwise.
+     |  
+     |  is_snan(self, x, /)
+     |      Return True if x is a signaling NaN, False otherwise.
+     |  
+     |  is_subnormal(self, x, /)
+     |      Return True if x is subnormal, False otherwise.
+     |  
+     |  is_zero(self, x, /)
+     |      Return True if x is a zero, False otherwise.
+     |  
+     |  ln(self, x, /)
+     |      Return the natural (base e) logarithm of x.
+     |  
+     |  log10(self, x, /)
+     |      Return the base 10 logarithm of x.
+     |  
+     |  logb(self, x, /)
+     |      Return the exponent of the magnitude of the operand's MSD.
+     |  
+     |  logical_and(self, x, y, /)
+     |      Digit-wise and of x and y.
+     |  
+     |  logical_invert(self, x, /)
+     |      Invert all digits of x.
+     |  
+     |  logical_or(self, x, y, /)
+     |      Digit-wise or of x and y.
+
+        logical_xor(self, x, y, /)
+     |      Digit-wise xor of x and y.
+     |  
+     |  max(self, x, y, /)
+     |      Compare the values numerically and return the maximum.
+     |  
+     |  max_mag(self, x, y, /)
+     |      Compare the values numerically with their sign ignored.
+     |  
+     |  min(self, x, y, /)
+     |      Compare the values numerically and return the minimum.
+     |  
+     |  min_mag(self, x, y, /)
+     |      Compare the values numerically with their sign ignored.
+     |  
+     |  minus(self, x, /)
+     |      Minus corresponds to the unary prefix minus operator in Python, but applies
+     |      the context to the result.
+     |  
+     |  multiply(self, x, y, /)
+     |      Return the product of x and y.
+     |  
+     |  next_minus(self, x, /)
+     |      Return the largest representable number smaller than x.
+     |  
+     |  next_plus(self, x, /)
+     |      Return the smallest representable number larger than x.
+
+        next_toward(self, x, y, /)
+     |      Return the number closest to x, in the direction towards y.
+     |  
+     |  normalize(self, x, /)
+     |      Reduce x to its simplest form. Alias for reduce(x).
+     |  
+     |  number_class(self, x, /)
+     |      Return an indication of the class of x.
+     |  
+     |  plus(self, x, /)
+     |      Plus corresponds to the unary prefix plus operator in Python, but applies
+     |      the context to the result.
+     |  
+     |  power(self, /, a, b, modulo=None)
+     |      Compute a**b. If 'a' is negative, then 'b' must be integral. The result
+     |      will be inexact unless 'a' is integral and the result is finite and can
+     |      be expressed exactly in 'precision' digits.  In the Python version the
+     |      result is always correctly rounded, in the C version the result is almost
+     |      always correctly rounded.
+     |      
+     |      If modulo is given, compute (a**b) % modulo. The following restrictions
+     |      hold:
+     |      
+     |          * all three arguments must be integral
+     |          * 'b' must be nonnegative
+     |          * at least one of 'a' or 'b' must be nonzero
+     |          * modulo must be nonzero and less than 10**prec in absolute value
+     |  
+     |  quantize(self, x, y, /)
+     |      Return a value equal to x (rounded), having the exponent of y.
+
+        radix(self, /)
+     |      Return 10.
+     |  
+     |  remainder(self, x, y, /)
+     |      Return the remainder from integer division.  The sign of the result,
+     |      if non-zero, is the same as that of the original dividend.
+     |  
+     |  remainder_near(self, x, y, /)
+     |      Return x - y * n, where n is the integer nearest the exact value of x / y
+     |      (if the result is 0 then its sign will be the sign of x).
+     |  
+     |  rotate(self, x, y, /)
+     |      Return a copy of x, rotated by y places.
+     |  
+     |  same_quantum(self, x, y, /)
+     |      Return True if the two operands have the same exponent.
+     |  
+     |  scaleb(self, x, y, /)
+     |      Return the first operand after adding the second value to its exp.
+     |  
+     |  shift(self, x, y, /)
+     |      Return a copy of x, shifted by y places.
+     |  
+     |  sqrt(self, x, /)
+     |      Square root of a non-negative number to context precision.
+     |  
+     |  subtract(self, x, y, /)
+     |      Return the difference between x and y.
+     |  
+     |  to_eng_string(self, x, /)
+     |      Convert a number to a string, using engineering notation.
+     
+        to_integral(self, x, /)
+     |      Identical to to_integral_value(x).
+     |  
+     |  to_integral_exact(self, x, /)
+     |      Round to an integer. Signal if the result is rounded or inexact.
+     |  
+     |  to_integral_value(self, x, /)
+     |      Round to an integer.
+     |  
+     |  to_sci_string(self, x, /)
+     |      Convert a number to a string using scientific notation.
+     |  
