@@ -29,10 +29,19 @@ else:
 
 a, b, c = 5, 3, 4
 
-if a > b > c:
-    print(c, b, a)
-elif a > c > b:
-    print(b, c, a)
+if a > b:
+    a, b = a, b
+    print('A', a, b, c)
+elif a > b > c:
+    a, b, c =
+    print('B',  a, b, c)
+elif a < b > c:
+    a, b, c = c, a, b
+    print('C',  a, b, c)
+elif a < b < c:
+    a, b, c = a, b, c
+    print('D', a, b, c)
+
 
 
 # Задание 6
