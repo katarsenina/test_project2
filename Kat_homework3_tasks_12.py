@@ -42,3 +42,21 @@ print(word[-2:0:-1])
 
 #   • В десятой строке выведите длину данной строки.
 print(len(word))
+
+# Задание 2
+# Пользователь вводит строку. Разрежьте её на две равные части (если длина строки —
+# чётная, а если длина строки нечётная, то длина первой части должна быть на один
+# символ больше). Переставьте эти две части местами, результат запишите в новую
+# строку и выведите на экран.
+
+line = input("Input some string, please:\n")
+s = len(line) // 2
+if len(line) % 2 == 0:
+   evenline = line[0:s]
+#   print(evenline)
+else:
+   evenline = line[0:s].rjust(s+1, "a")
+   oddline = line[s:]
+#   print(evenline, oddline)
+revline = oddline + evenline
+print(revline)
