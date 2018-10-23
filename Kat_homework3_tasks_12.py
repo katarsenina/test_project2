@@ -2,10 +2,16 @@
 # Пользователь вводит строку. Выловите исключения, если введённая строка слишком короткая.
 
 word = input("Какой Ваш любимый цвет?\n")
+
 try:
-    1 / len(word[5:])
-except ZeroDivisionError:
+    word.index(word[5])
+except IndexError:
     print("Ответ слишком короткий")
+
+# try:
+#     1 / len(word[5:])
+# except ZeroDivisionError:
+#     print("Ответ слишком короткий")
 
 # Воспользуйтесь одним print(), но при этом выводите с новой строки:
 #  Сначала выведите третий символ этой строки.
@@ -15,17 +21,17 @@ print(word[2])
 print(word[-2])
 
 #  В третьей строке выведите первые пять символов этой строки.
-print(word[0:5])
+print(word[:5])
 
 #  В четвертой строке выведите всю строку, кроме последних двух символов.
-print(word[0:-2])
+print(word[:-2])
 
 #  В пятой строке выведите все символы с четными индексами (считая, что индексация
 # начинается с 0, поэтому символы выводятся, начиная с первого).
 print(word[1::2])
 
 #  В шестой строке выведите все символы с нечетными индексами, то есть начиная со второго символа строки.
-print(word[0::2])
+print(word[::2])
 
 #  В седьмой строке выведите все символы в обратном порядке.
 print(word[::-1])
@@ -49,10 +55,7 @@ line = input("Input some string, please:\n")
 s = len(line) // 2
 
 if len(line) % 2 == 0:
-   evenline = line[0:s]
+    revline = line[s:] + line[:s]
 else:
-   evenline = line[0:s].rjust(s+1, "a")
-   oddline = line[s:]
-
-revline = oddline + evenline
+    revline = line[s+1:]+ line[:s+1]
 print(revline)
